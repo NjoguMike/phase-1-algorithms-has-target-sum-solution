@@ -1,13 +1,29 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  let result = false
+
+  for(i = 0; i<array.length;i++){
+    for(x = i + 1; x<array.length;x++){
+      if((array[i] + array[x]) === target)
+        result = true
+      
+    } 
+  } return result
 }
 
 /* 
   Write the Big O time complexity of your function here
+  0(n * n) for the iteration
+  execution is longer due to the two iterations
 */
 
 /* 
   Add your pseudocode here
+  iterate through the array
+  compare first value against all the rest
+  check the sum of both values if it matches the target
+  return true if it does 
+  return false if it does not
 */
 
 /*
